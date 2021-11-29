@@ -1,0 +1,265 @@
+﻿.page-wrap { /* Detta använder jag för att centera hemsidan i webbläsaren. */
+    width: 1260px;
+    margin: 0 auto;
+    position: relative;}
+body { /* Hemsidans grund, bakgrund och bakgrundsfärger. */
+    background-image: url("pics/lightgray-background.jpg");
+    background-color: #000000;
+    transition: background-color .5s;}
+header { /* Översta bilden. */
+    background-image: url("pics/main-header.bmp");
+    color:white;
+    text-align:center;
+    padding:67px;}
+h1 {color: #607465; font-family: "Copperplate Gothic Light, sans-serif"; /* Den mest användna huvudrubriken. */
+    font-size: 400%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+h2 {color: #21383F; font-family: "Copperplate Gothic Light, sans-serif"; 
+    font-size: 200%;
+    text-align: justify;}
+h3 {color: #21383F; font-family: "Copperplate Gothic Light, sans-serif";
+    font-size: 100%;
+    text-align: justify;}
+.img {border: 4px solid #ffffff; /* Kod för hur bilder visas. */
+    border-radius: 9px;}
+p {color: #000000; font-family: "arial"; /* Kod för hur textstycken visas. Denna används, samt p1 och p2 och p3. Resten har jag angivet i fall att de skulle behövas. */
+    text-align: justify;}
+p1 {color: #000000; font-family: "arial";
+   font-size: 80%;
+   text-align:justified;}
+p2 {color: #ffffff; font-family: "Segoe UI"; font-size: 100%;}
+p3 {color: #666666; font-family: "Segoe UI"; font-size: 100%;}
+p4 {color: #ffffff; font-family: "Segoe UI";}
+p5 {color: #ffffff; font-family: "Segoe UI";}
+
+nav { /* Det här är menyraden. */
+    line-height:30px;
+    background-color:#eeeeee;
+    height:50px;
+    padding:0px;
+    float: center;
+}
+
+footer { /* Nedersta raden där jag har skrivit copyright. */
+    height:6px;
+    background-color:#eeeeee;
+    color:000000;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+
+.knapp { /* Menyknappen. */
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 30px;
+  font-family: Copperplate Gothic Light, sans-serif;
+  padding: 5px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+section { /* Denna används under index. Section använder jag för att placera bild eller textarea. */
+    background-color:transparent;
+    height:500px;
+    width:600px;
+    float:left;
+    padding:10px;
+    text-size-adjust: auto;
+}
+
+section2 { /* Denna används under index. Section använder jag för att placera bild eller textarea. */
+    background-color:transparent;
+    height:500px;
+    width:600px;
+    float:right;
+    padding:10px;
+    text-size-adjust: auto;
+}
+
+section3 { /* Denna används under samtliga kategorier, förutom index, övrigt och galleri. Section använder jag för att placera bild eller textarea. */
+    background-color:transparent;
+    height:300px;
+    width:540px;
+    float:left;
+    padding:10px;
+    padding-left:65px;
+    text-align:justify;
+    text-size-adjust: auto;
+}
+
+section4 { /* Denna används under samtliga kategorier, förutom index, övrigt och galleri. Section använder jag för att placera bild eller textarea. */
+    background-color:transparent;
+    height:300px;
+    width:540px;
+    float:right;
+    padding:10px;
+    padding-right:65px;
+    text-align:justify;
+    text-size-adjust: auto;
+}
+
+section5 { /* Denna används under övrigt. Section använder jag för att placera bild eller textarea. */
+    background-color:transparent;
+    height:500px;
+    width:550px;
+    float:left;
+    padding-right:60px;
+    padding-left:10px;
+    text-size-adjust: auto;
+}
+
+section6 { /* Denna används under galleri. Section använder jag för att placera bild eller textarea. */
+    background-color:transparent;
+    height:300px;
+    width:700px;
+    float:left;
+    padding-left:10px;
+    padding-top:10px;
+    text-size-adjust: auto;
+}
+
+.knapp span { /* Detta ger knappen MENY en animering. */
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.knapp span:after { /* Detta ger knappen MENY en animering. När man håller muisen över. */
+  content: ' ♥';
+  position: center;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.knapp:hover span { /* Detta ger knappen MENY en animering. */
+  padding-right: 0px;
+}
+
+.knapp:hover span:after { /* Detta ger knappen MENY en animering. */
+  opacity: 1;
+  right: 0;
+}
+
+div.scroll { /* Detta använder jag för att göra textstyckena till en scrollbar efter ett viss mängd text. */
+    background-color: #C2CDC5;
+    width: 500px;
+    height: 500px;
+    font-size: 16px;
+    overflow: scroll;
+}
+
+
+.sidnav { /* Detta är själva menyn. */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #666666;
+    background-image: url("pics/side.png");
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.8s;
+}
+
+
+.sidnav a { /* Detta är kod för texten på menyn, exempelvis startsida eller galleri. */
+    padding: 8px 8px 25px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    letter-spacing: 2px;
+    color: #ffffff;
+    display: block;
+    transition: 0.6s
+}
+
+
+.sidnav a:hover, .offcanvas a:focus{ /* Detta ger texten på menyn en animering. */
+    color: #3d73ab;
+    font-size: 120%;
+}
+
+
+.closebtn { /* Detta är stäng menyn-funktionen till höger på menyn. */
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 15px !important;
+    margin-left: 8px;
+}
+
+{
+    .sidnav {padding-top: 15px;}
+    .sidnav a {font-size: 18px;}
+}
+
+textarea { /* Detta är texten i kontaktformuläret - där man skriver sin text. */
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #666666;
+    border-radius: 1px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    font-family: Copperplate Gothic Light, sans-serif;
+    letter-spacing: 2px;
+    resize: none;
+}
+
+input[type=text] { /* Detta är där man skriver sitt namn i kontaktformuläret. */
+    width: 50%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #666666;
+    border-radius: 1px;
+}
+
+input[type=email] { /* Detta är där man skriver sin mail i kontaktformuläret. */
+    width: 50%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #666666;
+    border-radius: 1px;
+}
+
+input[type=text]:focus { /* Detta ger rutan för namn i kontaktformuläret en röd ram, dvs en fokus-effekt. */
+    border: 1px solid #b61010;
+}
+
+input[type=email]:focus { /* Detta ger rutan för epost i kontaktformuläret en röd ram, dvs en fokus-effekt. */
+    border: 1px solid #b61010;
+}
+
+textarea:focus { /* Detta ger rutan för meddelande i kontaktformuläret en röd ram, dvs en fokus-effekt. */
+    border: 1px solid #b61010;
+}
+
+
+article { /* Den här använder jag för att placera musikspelaren i indexet dvs startsidan. */
+    height:10px;
+    width:300px;
+    float:right;
+    padding:10px;
+}
+
+article2 { /* Den här använder jag för att placera information om bilderna i galleriet bredvid galleriet. */
+    height:10px;
+    width:500px;
+    float:right;
+    padding:10px;
+}
